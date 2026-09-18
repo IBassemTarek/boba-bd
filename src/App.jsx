@@ -215,8 +215,24 @@ export default function App() {
 
   useEffect(() => () => playerRef.current?.destroy(), [])
 
+  const startMusic = async () => {
+    if (!playerRef.current) {
+      playerRef.current = createBirthdayPlayer(() => setIsPlaying(false))
+    }
+    if (!playerRef.current) return
+
+    setIsPlaying(true)
+    try {
+      await playerRef.current.play()
+    } catch {
+      // بعض المتصفحات قد تمنع الصوت؛ يظل الزر متاحًا للمحاولة يدويًا.
+      setIsPlaying(false)
+    }
+  }
+
   const openGift = () => {
     if (opening) return
+    startMusic()
     setOpening(true)
     setConfetti(true)
     window.setTimeout(() => setOpened(true), 720)
@@ -232,8 +248,7 @@ export default function App() {
       playerRef.current.stop()
       setIsPlaying(false)
     } else {
-      setIsPlaying(true)
-      await playerRef.current.play()
+      await startMusic()
     }
   }
 
