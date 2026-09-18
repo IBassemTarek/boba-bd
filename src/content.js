@@ -12,12 +12,22 @@ export const birthdayContent = {
     {
       src: '/photos/boba-album-1.webp',
       alt: 'بوبا مبتسمة في العربية',
-      caption: 'ضحكة حلوة شبهك',
     },
     {
       src: '/photos/boba-album-2.webp',
       alt: 'صورة عفوية لبوبا وهي مبتسمة',
-      caption: 'العفوية اللي بتحلّي الصورة',
+    },
+    {
+      src: '/photos/boba-album-3.webp',
+      alt: 'بوبا مع العيلة في خروجة نهارية',
+    },
+    {
+      src: '/photos/boba-album-4.webp',
+      alt: 'بوبا في صورة ليلية لطيفة مع العيلة',
+    },
+    {
+      src: '/photos/boba-album-5.webp',
+      alt: 'بوبا مع العيلة أمام أبراج مضيئة ليلًا',
     },
   ],
   moments: [

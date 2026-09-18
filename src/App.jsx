@@ -107,10 +107,9 @@ function Album({ onSelect }) {
             className={`polaroid polaroid-${index + 1}`}
             key={`${photo.src}-${index}`}
             onClick={() => onSelect(index)}
-            aria-label={`تكبير: ${photo.caption}`}
+            aria-label={`تكبير: ${photo.alt}`}
           >
             <span className="photo-frame"><Photo photo={photo} index={index} /></span>
-            <span className="photo-caption">{photo.caption}</span>
           </button>
         ))}
       </div>
@@ -199,7 +198,6 @@ function Lightbox({ selected, onClose }) {
       <div className="lightbox-card" onMouseDown={(event) => event.stopPropagation()}>
         <button className="close-button" onClick={onClose} autoFocus aria-label="إغلاق الصورة">×</button>
         <div className="lightbox-image"><Photo photo={photo} index={selected} /></div>
-        <p>{photo.caption}</p>
       </div>
     </div>
   )

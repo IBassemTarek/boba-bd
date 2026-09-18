@@ -21,7 +21,7 @@ describe('birthday experience', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: 'افتحي الهدية يا بوبا' }))
     await act(() => vi.advanceTimersByTimeAsync(750))
-    fireEvent.click(screen.getByRole('button', { name: /تكبير: ضحكة/ }))
+    fireEvent.click(screen.getByRole('button', { name: /تكبير: بوبا مبتسمة/ }))
     expect(screen.getByRole('dialog')).toBeInTheDocument()
     fireEvent.keyDown(document, { key: 'Escape' })
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument()

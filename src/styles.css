@@ -301,7 +301,7 @@ button:focus-visible, a:focus-visible {
   margin-inline: auto;
 }
 .polaroid {
-  padding: 12px 12px 20px;
+  padding: 12px;
   border: 0;
   background: var(--white);
   box-shadow: 0 12px 30px rgba(78, 39, 55, .13);
@@ -314,8 +314,8 @@ button:focus-visible, a:focus-visible {
 .polaroid-3 { transform: rotate(1deg); }
 .polaroid-4 { transform: rotate(-2deg); }
 .polaroid-6 { margin-top: 36px; transform: rotate(3deg); }
+.polaroid:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - 12px); justify-self: center; }
 .photo-frame { display: block; aspect-ratio: 1 / 1.08; overflow: hidden; background: #f6cad6; }
-.photo-caption { display: block; padding-top: 14px; font-family: 'Aref Ruqaa', serif; font-size: 1.08rem; }
 
 .moments { padding-block: 30px 150px; }
 .moment-list { display: grid; grid-template-columns: repeat(3, 1fr); border-block: 1px solid rgba(60,41,49,.2); }
@@ -373,9 +373,8 @@ button:focus-visible, a:focus-visible {
 footer { padding: 28px; color: var(--berry); text-align: center; background: var(--paper); font-family: 'Aref Ruqaa', serif; }
 
 .lightbox { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; padding: 24px; background: rgba(42,24,32,.86); backdrop-filter: blur(12px); animation: lightbox-in .25s ease both; }
-.lightbox-card { position: relative; width: min(540px, 100%); padding: 14px 14px 20px; background: var(--white); box-shadow: 0 28px 80px rgba(0,0,0,.34); transform: rotate(-1deg); }
+.lightbox-card { position: relative; width: min(540px, 100%); padding: 14px; background: var(--white); box-shadow: 0 28px 80px rgba(0,0,0,.34); transform: rotate(-1deg); }
 .lightbox-image { aspect-ratio: 4 / 5; overflow: hidden; }
-.lightbox-card > p { margin: 15px 5px 0; text-align: center; font-family: 'Aref Ruqaa', serif; font-size: 1.3rem; }
 .close-button { position: absolute; z-index: 2; top: -16px; left: -16px; display: grid; place-items: center; width: 43px; height: 43px; border: 0; border-radius: 50%; color: var(--white); background: var(--berry); box-shadow: 0 5px 16px rgba(0,0,0,.2); cursor: pointer; font-size: 1.7rem; }
 
 @keyframes gift-pop { 50% { transform: translateY(10px) scale(.94); } 100% { transform: translateY(-80px) scale(1.2); opacity: 0; } }
@@ -414,9 +413,8 @@ footer { padding: 28px; color: var(--berry); text-align: center; background: var
   .album { padding-block: 85px 110px; }
   .section-heading { margin-bottom: 52px; }
   .polaroid-grid { gap: 27px 12px; }
-  .polaroid { padding: 7px 7px 14px; }
+  .polaroid { padding: 7px; }
   .polaroid-2, .polaroid-6 { margin-top: 25px; }
-  .photo-caption { padding-top: 10px; font-size: .9rem; }
   .photo-placeholder { min-height: 140px; }
   .photo-placeholder span { font-size: 2rem; }
   .photo-placeholder strong { font-size: 2.6rem; }
