@@ -78,7 +78,7 @@ function Hero() {
       <div className="hero-copy">
         <p className="eyebrow">النهارده — اليوم بتاعك</p>
         <h1>كل سنة وإنتِ<br /><em>طيبة يا بوبا</em></h1>
-        <p className="hero-lede">نهارده سبب كويس جدًا إننا نقول لك: وجودك خفيف، وروحك حلوة، ويومك يستاهل يبقى مميز.</p>
+        <p className="hero-lede">النهارده سبب كويس جدًا إننا نقول لك: وجودك خفيف، وروحك حلوة، ويومك يستاهل يبقى مميز.</p>
         <a href="#album" className="scroll-note">انزلي شوفي الهدية <span aria-hidden="true">↓</span></a>
       </div>
       <div className="hero-photo-wrap">
